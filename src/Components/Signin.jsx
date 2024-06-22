@@ -10,10 +10,21 @@ function Signin() {
     }))
   };
   // console.log(formData)
-  const handleSubmit = (e)=> {
+  const handleSubmit = async (e)=> {
     e.preventDefault();  //use to hold the value in console
     //api
-    console.log(formData)
+     //api
+      // console.log(createId);
+      const response = await fetch("http://localhost:2024/signin",{
+        method:"POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body:JSON.stringify(formData)
+      });
+      const jsonData = await response.json();
+      console.log(jsonData)
+   
 
   };
     

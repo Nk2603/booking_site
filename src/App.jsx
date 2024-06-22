@@ -4,7 +4,19 @@ import Signup from "./Components/Signup";
 import Navbar from "./Components/Navbar";
 import Slidebar from "./Components/Slidebar";
 import Card from "./Components/Card";
+import BookingForm from "./Components/BookingForm";
 function App() {
+//   let [ip, setIp] = useState({});
+//   useEffect(()=>{
+//     const fetchData = async()=>{
+// const data = await fetch("http://localhost:2024/");
+// // const data = {"ip":"32165498","let":"let long"}
+// const jsonData = await data.json();
+// console.log(jsonData);
+// setIp(jsonData);
+//     }
+//     fetchData();
+//   },[])
 
   return (
     <>
@@ -15,6 +27,7 @@ function App() {
           <Route path="/navbar" element={<Navbar/>} />
           <Route path="/slidebar" element={<Slidebar/>} />
           <Route path="/card" element={<Card/>} />
+          <Route path="/bookingform" element={<BookingForm/>}/>
         </Routes>
       </Router>
     </>
